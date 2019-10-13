@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VendingMachinePanymentSystem.CashPayment;
 
 namespace VendingMachinePanymentSystem
 {
@@ -25,11 +26,18 @@ namespace VendingMachinePanymentSystem
             //ePayment.Gateway = new DbsPaymentGateway();
             //ePayment.ProcessPayment();
 
-            AbstractEPayment ePayment = new InternetPaymentSystem();
-            ePayment.Price = 100;
-            ePayment.Gateway = new OcbcPaymentGateway();
+            AbstractEPayment payment = new InternetPaymentSystem();
+            payment.Price = 100;
+            payment.Gateway = new OcbcPaymentGateway();
 
-            if (ePayment.ProcessPayment())
+
+            //AbstractPayment payment = new PaperCurrencyPayment();
+            //ePayment.Price = 100;
+
+            //AbstractPayment payment = new CoinPayment();
+            //payment.Price = 100;
+
+            if (payment.ProcessPayment())
             {
                 Console.WriteLine("Done");
             }

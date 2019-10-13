@@ -9,7 +9,7 @@ namespace VendingMachinePanymentSystem
     public abstract class AbstractPayment
     {
         protected double price;
-        private double totalMoney;
+        protected double totalMoney;
         public double Price { set { price = value; } }
         public abstract bool ProcessPayment();
     }

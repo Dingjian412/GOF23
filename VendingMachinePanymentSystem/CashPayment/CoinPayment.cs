@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace VendingMachinePanymentSystem.CashPayment
 {
-    public class CoinPayment:AbstractCashPayment
+    public class CoinPayment : AbstractCashPayment
     {
+        public override bool ProcessPayment()
+        {
+            Console.WriteLine("CoinPayment");
+            return true;
+        }
     }
 }

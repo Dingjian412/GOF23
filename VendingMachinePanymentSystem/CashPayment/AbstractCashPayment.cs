@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace VendingMachinePanymentSystem
 {
-    public class AbstractCashPayment : AbstractPayment
+    public abstract class AbstractCashPayment : AbstractPayment
     {
-        public override bool ProcessPayment()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

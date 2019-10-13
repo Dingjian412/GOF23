@@ -14,10 +14,5 @@ namespace VendingMachinePanymentSystem
         {
             set { gateway = value; }
         }
-
-        public override bool ProcessPayment()
-        {
-            return gateway.Pay(base.price);
-        }
     }
 }
